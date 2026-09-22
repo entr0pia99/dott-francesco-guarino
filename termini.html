@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Termini e Condizioni – Dott. Francesco Guarino</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sage-dk: #3E6B3C;
+            --sage: #7C9E7A;
+            --sage-lt: #B5CEB3;
+            --light: #D6E4D4;
+            --cream: #F7F3EC;
+            --warm: #FFFDF9;
+            --char: #2C3330;
+            --mid: #5A6B5E;
+            --border: #E2EBE0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--warm);
+            color: var(--char);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 253, 249, .92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--sage-dk);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo span {
+            font-family: 'DM Sans', sans-serif;
+            font-size: .7rem;
+            font-weight: 400;
+            color: var(--mid);
+            display: block;
+            letter-spacing: .04em;
+        }
+
+        .logo-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--sage-dk);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+        }
+
+        .nav-back {
+            font-size: .88rem;
+            color: var(--sage-dk);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--light);
+            border: 1px solid var(--sage-lt);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: all .2s;
+        }
+
+        .nav-back:hover {
+            background: var(--sage-dk);
+            color: white;
+        }
+
+        .hero-legal {
+            background: linear-gradient(160deg, var(--cream) 60%, var(--light) 100%);
+            padding: 120px 64px 60px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-legal .label {
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 12px;
+        }
+
+        .hero-legal h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--char);
+            margin-bottom: 12px;
+        }
+
+        .hero-legal p {
+            font-size: .9rem;
+            color: var(--mid);
+            font-weight: 300;
+        }
+
+        .content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 64px 64px 80px;
+        }
+
+        .content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--char);
+            margin: 40px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content p {
+            font-size: .92rem;
+            color: var(--mid);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 12px;
+        }
+
+        .content ul {
+            margin: 8px 0 16px 20px;
+        }
+
+        .content ul li {
+            font-size: .92rem;
+            color: var(--mid);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 6px;
+        }
+
+        .content strong {
+            color: var(--char);
+            font-weight: 500;
+        }
+
+        .info-box {
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--sage-dk);
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: var(--char);
+            color: rgba(255, 255, 255, .4);
+            padding: 32px 64px;
+            text-align: center;
+            font-size: .8rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, .6);
+            transition: color .2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media(max-width:768px) {
+            .hero-legal {
+                padding: 100px 24px 40px;
+            }
+
+            .content {
+                padding: 40px 24px 60px;
+            }
+
+            footer {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="../DottGuarino/homepage.html" class="nav-logo">
+            <div class="logo-mark">G</div>
+            <div>Dott. Francesco Guarino<span>Biologo Nutrizionista</span></div>
+        </a>
+        <a href="../DottGuarino/homepage.html" class="nav-back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 5l-7 7 7 7" />
+            </svg>
+        </a>
+    </nav>
+
+    <div class="hero-legal">
+        <div style="max-width:760px;margin:0 auto;">
+            <p class="label">Informativa legale</p>
+            <h1>Termini e Condizioni</h1>
+            <p>Ultimo aggiornamento: gennaio 2025 &nbsp;·&nbsp; Legge applicabile: ordinamento italiano</p>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <h2>1. Informazioni generali</h2>
+        <p>Il presente sito web (<strong>francescoguarino.it</strong>) è di proprietà del Dott. Francesco Guarino,
+            Biologo Nutrizionista, con sede a Giugliano in Campania (NA), email: <a href="mailto:info@francescoguarino.it"
+                style="color:var(--sage-dk);">info@francescoguarino.it</a>.</p>
+        <p>L'utilizzo del sito implica l'accettazione integrale dei presenti Termini e Condizioni. Si invita a leggerli
+            attentamente prima di proseguire.</p>
+
+        <h2>2. Descrizione dei servizi</h2>
+        <p>Il Dott. Francesco Guarino offre servizi di consulenza nutrizionale a titolo professionale, tra cui:</p>
+        <ul>
+            <li>Consulenze nutrizionali individuali in studio (Giugliano in Campania) o in modalità online (videochiamata)</li>
+            <li>Elaborazione di piani alimentari personalizzati</li>
+            <li>Supporto e monitoraggio nel corso del percorso nutrizionale</li>
+            <li>Consulenze specialistiche (nutrizione sportiva, patologie metaboliche, gravidanza)</li>
+        </ul>
+        <p>Le informazioni presenti sul sito hanno carattere puramente informativo e divulgativo e non costituiscono
+            consulenza medica o nutrizionale individuale.</p>
+
+        <h2>3. Natura del rapporto professionale</h2>
+        <div class="info-box">
+            <p>⚕️ <strong>Importante:</strong> Il Dott. Francesco Guarino è un Biologo Nutrizionista iscritto all'Ordine
+                Nazionale dei Biologi. La sua attività si svolge nell'ambito delle competenze riconosciute dalla legge
+                italiana ai biologi nutrizionisti (L. 396/67 e successive). Le consulenze nutrizionali non sostituiscono
+                in alcun caso il parere del medico curante.</p>
+        </div>
+
+        <h2>4. Prenotazione e pagamento</h2>
+        <p>Le consulenze si prenotano tramite i canali indicati sul sito (WhatsApp, email). Il compenso per i servizi è
+            quello indicato nella sezione Prezzi del sito, salvo preventivi personalizzati concordati per iscritto.</p>
+        <p>Il pagamento può avvenire tramite le modalità concordate al momento della prenotazione (contanti in studio,
+            bonifico bancario, ecc.). Verrà emessa regolare fattura per ogni prestazione professionale.</p>
+
+        <h2>5. Disdetta e rimborsi</h2>
+        <p>In caso di impossibilità a rispettare un appuntamento, si richiede la disdetta con almeno <strong>24 ore di
+                anticipo</strong> tramite WhatsApp o email. 
+                <!-- Disdette tardive o mancate presentazioni senza preavviso potranno essere addebitate come visita effettuata.</p> -->
+        <p>Per i pacchetti plurimensili, le condizioni di recesso verranno concordate per iscritto al momento dell'avvio
+            del percorso.</p>
+
+        <h2>6. Limitazione di responsabilità</h2>
+        <p>Le informazioni e i contenuti pubblicati su questo sito hanno scopo esclusivamente divulgativo. Il Dott.
+            Francesco Guarino non si assume alcuna responsabilità per:</p>
+        <ul>
+            <li>L'uso improprio delle informazioni nutrizionali presenti sul sito senza una consulenza individualizzata
+            </li>
+            <li>Eventuali interruzioni, errori o malfunzionamenti del sito</li>
+            <li>Contenuti di siti terzi raggiungibili tramite link presenti nel sito</li>
+        </ul>
+        <p>I risultati ottenuti tramite un percorso nutrizionale dipendono da numerosi fattori individuali e non possono
+            essere garantiti in anticipo.</p>
+
+        <h2>7. Proprietà intellettuale</h2>
+        <p>Tutti i contenuti presenti sul sito (testi, immagini, loghi, grafica) sono di proprietà del Dott. Francesco
+            Guarino o utilizzati con regolare licenza. È vietata la riproduzione, anche parziale, senza autorizzazione
+            scritta.</p>
+
+        <h2>8. Legge applicabile e foro competente</h2>
+        <p>I presenti Termini e Condizioni sono regolati dalla legge italiana. Per qualsiasi controversia relativa al
+            presente sito o ai servizi offerti, le parti concordano che sarà competente in via esclusiva il Foro di
+            Napoli, salvo diversa disposizione inderogabile di legge a tutela del consumatore.</p>
+
+        <h2>9. Modifiche ai Termini</h2>
+        <p>Il Dott. Francesco Guarino si riserva il diritto di modificare i presenti Termini e Condizioni in qualsiasi
+            momento. Le modifiche avranno effetto dalla pubblicazione sul sito. L'utilizzo continuato del sito dopo le
+            modifiche costituirà accettazione dei nuovi termini.</p>
+
+        <h2>10. Contatti</h2>
+        <p>Per qualsiasi domanda relativa ai presenti Termini e Condizioni:</p>
+        <div class="info-box">
+            <p><strong>Dott. Francesco Guarino</strong><br>
+                Email: <a href="mailto:info@francescoguarino.it"
+                    style="color:var(--sage-dk);">info@francescoguarino.it</a><br>
+                WhatsApp: <a href="https://wa.me/393349769082" style="color:var(--sage-dk);">+39 334 976 9082</a></p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Dott. Francesco Guarino – Biologo Nutrizionista &nbsp;·&nbsp;
+            <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+            <a href="cookie-policy.html">Cookie Policy</a> &nbsp;·&nbsp;
+            <a href="termini.html">Termini e Condizioni</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

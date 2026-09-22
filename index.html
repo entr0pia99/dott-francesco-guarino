@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dott. Francesco Guarino – Biologo Nutrizionista</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sage-dk: #3E6B3C;
+            --sage: #7C9E7A;
+            --sage-lt: #B5CEB3;
+            --light: #D6E4D4;
+            --cream: #F7F3EC;
+            --warm: #FFFDF9;
+            --peach: #E8A87C;
+            --peach-lt: #F5D5BC;
+            --char: #2C3330;
+            --mid: #5A6B5E;
+            --border: #E2EBE0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--warm);
+            color: var(--char);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ── NAV ─────────────────────────── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 253, 249, .92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--sage-dk);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo span {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--mid);
+            display: block;
+            letter-spacing: .04em;
+        }
+
+        .logo-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--sage-dk);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-size: .92rem;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: var(--mid);
+            transition: color .2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dk);
+        }
+
+        .nav-cta {
+            background: var(--sage-dk);
+            color: white;
+            padding: 9px 22px;
+            border-radius: 100px;
+            font-size: .85rem;
+            font-weight: 500;
+            transition: background .2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage);
+        }
+
+        .nav-mobile {
+            display: none;
+        }
+
+        /* ── HERO ────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 100px 64px 60px;
+            gap: 48px;
+            background: linear-gradient(160deg, var(--cream) 60%, var(--light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(181, 206, 179, .35), transparent 70%);
+            top: -100px;
+            right: -100px;
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--light);
+            border: 1px solid var(--sage-lt);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--sage-dk);
+            margin-bottom: 20px;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--sage-dk);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            line-height: 1.12;
+            color: var(--char);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 em {
+            color: var(--sage-dk);
+            font-style: italic;
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: var(--mid);
+            line-height: 1.7;
+            max-width: 440px;
+            margin-bottom: 36px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--sage-dk);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 100px;
+            font-size: .9rem;
+            font-weight: 500;
+            transition: all .2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: var(--sage);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--sage-dk);
+            border: 1.5px solid var(--sage-dk);
+            padding: 13px 26px;
+            border-radius: 100px;
+            font-size: .9rem;
+            font-weight: 500;
+            transition: all .2s;
+        }
+
+        .btn-outline:hover {
+            background: var(--sage-dk);
+            color: white;
+        }
+
+        .hero-img {
+            position: relative;
+        }
+
+        .hero-img-main {
+            width: 100%;
+            border-radius: 32px;
+            background: linear-gradient(145deg, var(--sage-dk), var(--sage), var(--sage-lt));
+            aspect-ratio: 3/4;
+            max-height: 560px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-img-main .initials {
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            opacity: .25;
+            position: absolute;
+            bottom: -20px;
+            right: 10px;
+        }
+
+        .hero-img-main .hero-card {
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 20px;
+            padding: 18px 24px;
+            font-size: .85rem;
+            text-align: center;
+            position: absolute;
+            bottom: 24px;
+            left: 20px;
+            right: 20px;
+        }
+
+        .hero-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .hero-card-sub {
+            font-size: .75rem;
+            opacity: .8;
+            font-weight: 300;
+        }
+
+        .hero-float {
+            position: absolute;
+            background: white;
+            border-radius: 16px;
+            padding: 12px 18px;
+            box-shadow: 0 8px 32px rgba(44, 51, 48, .12);
+            font-size: .78rem;
+            font-weight: 500;
+            color: var(--char);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-float-1 {
+            top: 30px;
+            right: -20px;
+        }
+
+        .hero-float-2 {
+            top: 160px;
+            right: -30px;
+        }
+
+        .float-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        /* ── SECTION HELPERS ─────────────── */
+        section {
+            padding: 80px 64px;
+        }
+
+        .section-label {
+            font-size: .75rem;
+            font-weight: 500;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+            color: var(--char);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .section-sub {
+            font-size: 1.02rem;
+            font-weight: 300;
+            color: var(--mid);
+            line-height: 1.7;
+            max-width: 540px;
+            margin-bottom: 40px;
+        }
+
+        .max-w {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ── FEATURES ────────────────────── */
+        .features-section {
+            background: var(--cream);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feat-card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            border: 1px solid var(--border);
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .feat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(44, 51, 48, .09);
+        }
+
+        .feat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+
+        .feat-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--char);
+        }
+
+        .feat-desc {
+            font-size: .88rem;
+            color: var(--mid);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* ── ABOUT ───────────────────────── */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-photos {
+            position: relative;
+        }
+
+        .photo-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 28px;
+        }
+
+        .photo-accent {
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            width: 55%;
+            border-radius: 20px;
+            aspect-ratio: 1;
+            border: 4px solid white;
+            box-shadow: 0 8px 24px rgba(44, 51, 48, .1);
+            overflow: hidden;
+        }
+
+        .photo-accent img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        V .about-stats {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .astat {
+            text-align: center;
+            flex: 1;
+        }
+
+        .astat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--sage-dk);
+            line-height: 1;
+        }
+
+        .astat-label {
+            font-size: .73rem;
+            color: var(--mid);
+            margin-top: 4px;
+        }
+
+        .astat-bar {
+            height: 3px;
+            background: linear-gradient(90deg, var(--sage-dk), var(--peach));
+            border-radius: 2px;
+            margin-top: 8px;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .pill {
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: .75rem;
+            font-weight: 500;
+            background: var(--light);
+            color: var(--sage-dk);
+        }
+
+        /* ── SERVICES ────────────────────── */
+        .services-section {
+            background: var(--sage-dk);
+            color: white;
+        }
+
+        .services-section .section-label {
+            color: var(--sage-lt);
+        }
+
+        .services-section .section-title {
+            color: white;
+        }
+
+        .services-section .section-sub {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .srv-card {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all .2s;
+        }
+
+        .srv-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .srv-card:hover {
+            background: rgba(255, 255, 255, .14);
+            transform: translateY(-4px);
+        }
+
+        .srv-icon {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .srv-title {
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 1.2rem;
+        }
+
+        .srv-desc {
+            font-size: 1rem;
+            opacity: .75;
+            line-height: 1.55;
+            font-weight: 300;
+        }
+
+
+        /* ── PRICING ─────────────────────── */
+        .pricing-section {
+            background: var(--cream);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: start;
+        }
+
+        .price-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px 28px;
+            border: 1.5px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(44, 51, 48, .1);
+        }
+
+        .price-card.featured {
+            background: var(--sage-dk);
+            color: white;
+            border-color: var(--sage-dk);
+            transform: scale(1.03);
+        }
+
+        .price-card.featured:hover {
+            transform: scale(1.03) translateY(-4px);
+        }
+
+        .price-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--peach);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: .68rem;
+            font-weight: 600;
+            letter-spacing: .04em;
+        }
+
+        .price-name {
+            font-weight: 600;
+            font-size: .9rem;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .price-name-featured {
+            color: var(--sage-lt);
+        }
+
+        .price-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--sage-dk);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .price-card.featured .price-num {
+            color: white;
+        }
+
+        .price-period {
+            font-size: .8rem;
+            color: var(--mid);
+            margin-bottom: 24px;
+        }
+
+        .price-card.featured .price-period {
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .price-divider {
+            height: 1px;
+            background: var(--border);
+            margin-bottom: 24px;
+        }
+
+        .price-card.featured .price-divider {
+            background: rgba(255, 255, 255, .2);
+        }
+
+        .price-feat {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .88rem;
+            margin-bottom: 12px;
+            color: var(--mid);
+        }
+
+        .price-card.featured .price-feat {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        .check {
+            color: var(--sage-dk);
+            font-weight: 700;
+            font-size: .9rem;
+            flex-shrink: 0;
+        }
+
+        .price-card.featured .check {
+            color: var(--peach);
+        }
+
+        .price-cta {
+            display: block;
+            text-align: center;
+            background: var(--sage-dk);
+            color: white;
+            padding: 13px;
+            border-radius: 100px;
+            font-size: .88rem;
+            font-weight: 500;
+            margin-top: 24px;
+            transition: all .2s;
+        }
+
+        .price-card.featured .price-cta {
+            background: white;
+            color: var(--sage-dk);
+        }
+
+        .price-cta:hover {
+            opacity: .85;
+            transform: translateY(-1px);
+        }
+
+        /* ── TESTIMONIALS ────────────────── */
+        .testi-section {
+            background: var(--warm);
+        }
+
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .testi-card {
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 26px;
+            border: 1px solid var(--border);
+        }
+
+        .stars {
+            color: var(--peach);
+            font-size: .9rem;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .testi-text {
+            font-size: .88rem;
+            color: var(--char);
+            line-height: 1.65;
+            font-style: italic;
+            margin-bottom: 18px;
+            font-weight: 300;
+        }
+
+        .testi-text::before {
+            content: '"';
+        }
+
+        .testi-text::after {
+            content: '"';
+        }
+
+        .testi-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testi-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--sage-dk);
+        }
+
+        .testi-name {
+            font-weight: 500;
+            font-size: .85rem;
+        }
+
+        .testi-loc {
+            font-size: .72rem;
+            color: var(--mid);
+        }
+
+        /* ── BLOG ────────────────────────── */
+        .blog-section {
+            background: var(--cream);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(44, 51, 48, .09);
+        }
+
+        .blog-thumb {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .blog-body {
+            padding: 20px 22px;
+        }
+
+        .blog-tag {
+            font-size: .68rem;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 8px;
+        }
+
+        .blog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        .blog-excerpt {
+            font-size: .8rem;
+            color: var(--mid);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .blog-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 22px;
+            border-top: 1px solid var(--border);
+            font-size: .75rem;
+            color: var(--mid);
+        }
+
+        .read-more {
+            color: var(--sage-dk);
+            font-weight: 500;
+        }
+
+        /* ── CTA STRIP ───────────────────── */
+        .cta-strip {
+            background: linear-gradient(135deg, var(--sage-dk), var(--sage));
+            color: white;
+            text-align: center;
+            padding: 72px 64px;
+        }
+
+        .cta-strip h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            margin-bottom: 12px;
+        }
+
+        .cta-strip p {
+            font-weight: 300;
+            opacity: .85;
+            margin-bottom: 32px;
+            font-size: .97rem;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--sage-dk);
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: .9rem;
+            display: inline-block;
+            transition: all .2s;
+            margin: 0 8px;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+        }
+
+        .btn-wh-outline {
+            background: transparent;
+            color: white;
+            border: 1.5px solid rgba(255, 255, 255, .6);
+            padding: 13px 28px;
+            border-radius: 100px;
+            font-size: .9rem;
+            font-weight: 500;
+            display: inline-block;
+            transition: all .2s;
+            margin: 0 8px;
+        }
+
+        .btn-wh-outline:hover {
+            background: rgba(255, 255, 255, .15);
+        }
+
+        .about-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .about-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--light);
+            border: 1px solid var(--sage-lt);
+            color: var(--sage-dk);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: .82rem;
+            font-weight: 500;
+            transition: all .2s;
+        }
+
+        .about-social a:hover {
+            background: var(--sage-dk);
+            color: white;
+        }
+
+        /* ── FOOTER ──────────────────────── */
+        footer {
+            background: var(--char);
+            color: white;
+            padding: 64px 64px 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .footer-brand p {
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .5);
+            line-height: 1.7;
+            font-weight: 300;
+            max-width: 260px;
+        }
+
+        .footer-contact {
+            margin-top: 18px;
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .footer-contact div {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-col h4 {
+            font-size: .72rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .4);
+            margin-bottom: 16px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .65);
+            margin-bottom: 10px;
+            transition: color .2s;
+            font-weight: 300;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-hours {
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .55);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .35);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* Social footer */
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .15);
+            color: rgba(255, 255, 255, .7);
+            padding: 7px 14px;
+            border-radius: 100px;
+            font-size: .8rem;
+            font-weight: 400;
+            transition: all .2s;
+        }
+
+        .footer-social a:hover {
+            background: rgba(255, 255, 255, .16);
+            color: white;
+        }
+
+        /* ── HERO FEATURES (destra hero) ─── */
+        .hero-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            align-self: start;
+        }
+
+        .hf-card {
+            background: white;
+            border-radius: 12px;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            transition: transform .2s, box-shadow .2s;
+            box-shadow: 0 2px 8px rgba(44, 51, 48, .05);
+        }
+
+        .hf-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 51, 48, .1);
+        }
+
+        .hf-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .85rem;
+            margin-bottom: 6px;
+        }
+
+        .hf-title {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+            color: var(--char);
+        }
+
+        .hf-desc {
+            font-size: .74rem;
+            color: var(--mid);
+            line-height: 1.45;
+            font-weight: 300;
+        }
+
+        .hf-header {
+            margin-bottom: 14px;
+        }
+
+        .hf-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .hf-header .section-label {
+            margin-bottom: 4px;
+        }
+
+        .hf-header .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+
+        .hf-header .section-sub {
+            font-size: .82rem;
+            margin-bottom: 0;
+            max-width: 100%;
+        }
+
+        .hf-wrap {
+            width: 100%;
+            border-radius: 32px;
+            background: linear-gradient(145deg, var(--sage-dk), var(--sage), var(--sage-lt));
+            padding: 28px;
+            box-shadow: 0 8px 32px rgba(44, 51, 48, .15);
+        }
+
+        .hf-wrap .section-label {
+            color: var(--sage-lt);
+        }
+
+        .hf-wrap .section-title {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+
+        .hf-wrap .section-sub {
+            color: rgba(255, 255, 255, .75);
+            font-size: .82rem;
+            margin-bottom: 0;
+            max-width: 100%;
+        }
+
+        .hf-wrap .hf-card {
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, .25);
+            box-shadow: none;
+        }
+
+        .hf-wrap .hf-card:hover {
+            background: rgba(255, 255, 255, .22);
+        }
+
+        .hf-wrap .hf-title {
+            color: white;
+        }
+
+        .hf-wrap .hf-desc {
+            color: rgba(255, 255, 255, .75);
+        }
+
+        .hf-wrap .hf-icon {
+            background: rgba(255, 255, 255, .2);
+        }
+
+        .hf-card.wide {
+            grid-column: 1/-1;
+        }
+
+        .old-price {
+            position: relative;
+            font-size: 0.6em;
+            color: var(--sage-dk);
+        }
+
+        .old-price::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #C0392B;
+            transform: rotate(-20deg);
+            /* angolo della sbarra */
+            transform-origin: center;
+        }
+
+        .old-price::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #C0392B;
+            transform: rotate(20deg);
+            /* angolo della sbarra */
+            transform-origin: center;
+        }
+
+        /* ── RESPONSIVE ──────────────────── */
+        @media(max-width:860px) {
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 253, 249, .97);
+                padding: 16px 32px 24px;
+                border-bottom: 1px solid var(--border);
+                gap: 18px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            nav .nav-cta {
+                display: none;
+            }
+
+            .nav-mobile {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                width: 38px;
+                height: 38px;
+                border-radius: 10px;
+                background: var(--light);
+                border: 1px solid var(--sage-lt);
+                cursor: pointer;
+                padding: 8px;
+                transition: background .2s;
+            }
+
+            .nav-mobile span {
+                display: block;
+                height: 2px;
+                background: var(--sage-dk);
+                border-radius: 2px;
+                transition: all .25s ease;
+                transform-origin: center;
+            }
+
+            .nav-mobile.open {
+                background: var(--sage-dk);
+            }
+
+            .nav-mobile.open span {
+                background: white;
+            }
+
+            .nav-mobile.open span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            .nav-mobile.open span:nth-child(2) {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            .nav-mobile.open span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+
+            section {
+                padding: 56px 16px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 100px 16px 24px;
+                text-align: center;
+                overflow-x: hidden;
+            }
+
+            .hero-sub {
+                margin: 0 auto 32px;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .hf-wrap {
+                width: 100%;
+                padding: 20px;
+                overflow: hidden;
+            }
+
+            .hf-title {
+                font-size: 1.2rem;
+            }
+
+            .hf-desc {
+                font-size: 1rem;
+            }
+
+            .srv-title {
+                font-size: 1rem;
+                line-height: 1.2;
+                word-break: break-word;
+            }
+
+            .srv-desc {
+                font-size: 1rem;
+            }
+
+            .hero-features {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                width: 100%;
+            }
+
+            .hf-card {
+                min-width: 0;
+                grid-column: 1/-1;
+            }
+
+            .hf-title {
+                text-align: left;
+            }
+
+            .hf-desc {
+                text-align: left;
+            }
+
+            .hf-card.wide {
+                grid-column: 1/-1;
+            }
+
+            .features-grid,
+            .services-grid,
+            .pricing-grid,
+            .testi-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+
+            .srv-card {
+                grid-column: 1/-1;
+                padding: 14px;
+                border-radius: 12px;
+                min-width: 0;
+            }
+
+            .srv-icon {
+                font-size: 1.1rem;
+            }
+
+            .pricing-grid {
+                gap: 12px;
+            }
+
+            .price-card.featured {
+                transform: none;
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+
+            /* .about-photos {
+                display: none;
+            } */
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero::before {
+                display: none;
+            }
+
+            .cta-btns {
+                display: grid;
+                gap: 1rem;
+            }
+
+            .cta-strip {
+                padding: 56px 24px;
+            }
+
+            footer {
+                padding: 48px 24px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <div class="logo-mark">G</div>
+            <div>
+                Dott. Francesco Guarino
+                <span>Biologo Nutrizionista</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="#about">Chi sono</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#prezzi">Prezzi</a>
+            <!-- <a href="#blog">Blog</a> -->
+            <a href="#contatti">Contatti</a>
+        </div>
+        <!-- <a href="#contatti" class="nav-cta">Consulenza Gratuita</a> -->
+        <div class="nav-mobile" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div>
+            <div class="hero-badge">Biologo Nutrizionista · Giugliano (NA)</div>
+            <h1>Meno sacrifici,<br><em>più sorrisi</em></h1>
+            <p class="hero-sub">La nutrizione migliore è quella che riesci a mantenere nel tempo. Percorsi
+                personalizzati, flessibili e concreti — senza privazioni inutili.</p>
+            <div class="hero-btns">
+                <a href="#contatti" class="btn-primary">📞 Prenota ora</a>
+                <a href="#servizi" class="btn-outline">Scopri i servizi</a>
+            </div>
+        </div>
+        <!-- destra: mini-features al posto dell'immagine -->
+        <div>
+            <div class="hf-wrap">
+                <div class="hf-header">
+                    <p class="section-label">Il mio approccio</p>
+                    <h2 class="section-title">Ritrova Energia e Benessere</h2>
+                    <p class="section-sub">Un percorso nutrizionale costruito attorno a te: i tuoi obiettivi, le tue
+                        abitudini, il tuo stile di vita.</p>
+                </div>
+                <div class="hero-features">
+                    <div class="hf-card wide">
+                        <div class="hf-card-header">
+                            <div class="hf-icon">🥗</div>
+                            <div class="hf-title">Dieta Flessibile</div>
+                        </div>
+                        <div class="hf-desc">Nessun cibo proibito. Un piano calibrato sulla realtà quotidiana che riesci
+                            a
+                            seguire davvero, anche fuori casa.</div>
+                    </div>
+                    <div class="hf-card">
+                        <div class="hf-card-header">
+                            <div class="hf-icon">🧬</div>
+                            <div class="hf-title">Approccio Scientifico</div>
+                        </div>
+                        <div class="hf-desc">Protocolli fondati sulle ultime evidenze scientifiche.</div>
+                    </div>
+                    <div class="hf-card">
+                        <div class="hf-card-header">
+                            <div class="hf-icon">💬</div>
+                            <div class="hf-title">Supporto Costante</div>
+                        </div>
+                        <div class="hf-desc">Sempre disponibile via WhatsApp o videochiamata.</div>
+                    </div>
+                    <div class="hf-card">
+                        <div class="hf-card-header">
+                            <div class="hf-icon">📍</div>
+                            <div class="hf-title">In Studio e Online</div>
+                        </div>
+                        <div class="hf-desc">Studio a Giugliano in Campania (NA) o consulenza online — scegli tu.</div>
+                    </div>
+                    <!-- <div class="hf-card">
+                        <div class="hf-card-header">
+                            <div class="hf-icon">📊</div>
+                            <div class="hf-title">Analisi Personalizzata</div>
+                        </div>
+                        <div class="hf-desc">Valutazione bioimpedenziometrica e anamnesi completa.</div>
+                    </div> -->
+                    <div class="hf-card">
+                        <div class="hf-card-header">
+                            <div class="hf-icon">🎯</div>
+                            <div class="hf-title">Obiettivi Concreti</div>
+                        </div>
+                        <div class="hf-desc">Dimagrimento, massa muscolare, patologie metaboliche, gestazione: un piano
+                            per
+                            ogni obiettivo specifico.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="hero-img">
+            <div class="hero-img-main">
+                <div class="initials">FG</div>
+                <div class="hero-card">
+                    <div class="hero-card-title">Dott. Francesco Guarino</div>
+                    <div class="hero-card-sub">Biologo Nutrizionista • Napoli & Online</div>
+                </div>
+            </div>
+            <div class="hero-float hero-float-1">
+                <div class="float-dot" style="background:var(--sage-dk)"></div>
+                ✅ 500+ pazienti seguiti
+            </div>
+            <div class="hero-float hero-float-2">
+                <div class="float-dot" style="background:var(--peach)"></div>
+                ⭐ 4.9/5 media recensioni
+            </div>
+        </div> -->
+    </section>
+
+    <!-- FEATURES -->
+    <!-- <section class="features-section">
+        <div class="max-w">
+            <p class="section-label">Il mio approccio</p>
+            <h2 class="section-title">Ritrova Energia e Benessere</h2>
+            <p class="section-sub">Un percorso nutrizionale costruito attorno a te: i tuoi obiettivi, le tue abitudini,
+                il tuo stile di vita.</p>
+            <div class="features-grid">
+                <div class="feat-card">
+                    <div class="feat-icon">🥗</div>
+                    <div class="feat-title">Dieta Flessibile</div>
+                    <div class="feat-desc">Nessun cibo proibito. Un piano calibrato sulla realtà quotidiana che riesci a
+                        seguire davvero, anche fuori casa.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">📊</div>
+                    <div class="feat-title">Analisi Personalizzata</div>
+                    <div class="feat-desc">Valutazione bioimpedenzometrica, anamnesi completa e monitoraggio continuo
+                        dei tuoi progressi.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">💬</div>
+                    <div class="feat-title">Supporto Costante</div>
+                    <div class="feat-desc">Sempre disponibile via WhatsApp o videochiamata per rispondere ai tuoi dubbi
+                        e adattare il piano.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">📍</div>
+                    <div class="feat-title">In Studio e Online</div>
+                    <div class="feat-desc">Visita presso lo studio di Napoli o consulenza online: scegli il formato più
+                        comodo per te.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">🧬</div>
+                    <div class="feat-title">Approccio Scientifico</div>
+                    <div class="feat-desc">Laurea in Scienze Biologiche e aggiornamento continuo garantiscono protocolli
+                        fondati sulle ultime evidenze.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">🎯</div>
+                    <div class="feat-title">Obiettivi Concreti</div>
+                    <div class="feat-desc">Dimagrimento, massa muscolare, patologie metaboliche, gestazione: un piano
+                        per ogni obiettivo specifico.</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- ABOUT -->
+    <section id="about" style="background:var(--warm);">
+        <div class="max-w about-section">
+            <div class="about-photos">
+                <div class="photo-main"><img src="../../Desktop/DottGuarino/img1.jpeg"></div>
+                <div class="photo-accent" style="background:var(--peach-lt);">
+                    <img src="../../Desktop/DottGuarino/logo.png">
+                </div>
+            </div>
+            <div>
+                <p class="section-label">Chi sono</p>
+                <h2 class="section-title">Dott. Francesco Guarino</h2>
+                <div class="pill-list">
+                    <span class="pill">Biologo Nutrizionista</span>
+                    <span class="pill">Scienze della Nutrizione</span>
+                    <span class="pill">Giugliano (NA) · Online</span>
+                </div>
+                <p class="section-sub">Sono un Biologo Nutrizionista con sede a Giugliano in Campania. Credo che una
+                    corretta
+                    alimentazione debba essere un piacere, non un sacrificio. Per questo costruisco percorsi su misura,
+                    flessibili e sostenibili nel tempo, basati sull'ascolto della persona prima ancora che dei numeri.
+                </p>
+                <p style="font-size:.9rem;color:var(--mid);line-height:1.7;font-weight:300;margin-bottom:28px;">La mia
+                    filosofia è semplice: la dieta migliore è quella che riesci a mantenere. Nessuno schema rigido,
+                    nessun cibo vietato. Solo un piano intelligente che si adatta alla tua vita.</p>
+                <a href="#contatti" class="btn-primary">Parliamo del tuo obiettivo →</a>
+                <p class="section-sub" style="margin-bottom: 0"><br>Mi trovi anche su:
+                </p>
+                <div class="about-social">
+                    <a href="https://instagram.com/nutrizionistaguarinofrancesco" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                        </svg>
+                        Instagram
+                    </a>
+                    <a href="https://facebook.com/francesco.guarino.104" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                        Facebook
+                    </a>
+                    <a href="https://tiktok.com/@dott.francescoguarino8" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.79 1.52V6.75a4.85 4.85 0 0 1-1.02-.06z" />
+                        </svg>
+                        TikTok
+                    </a>
+                </div>
+                <!-- <div class="about-stats">
+        <div class="astat">
+          <div class="astat-num">500+</div>
+          <div class="astat-label">Pazienti seguiti</div>
+          <div class="astat-bar"></div>
+        </div>
+        <div class="astat">
+          <div class="astat-num">10+</div>
+          <div class="astat-label">Anni di esperienza</div>
+          <div class="astat-bar" style="background:linear-gradient(90deg,var(--sage),var(--peach))"></div>
+        </div>
+        <div class="astat">
+          <div class="astat-num">4.9★</div>
+          <div class="astat-label">Valutazione media</div>
+          <div class="astat-bar" style="background:linear-gradient(90deg,var(--peach),var(--sage-lt))"></div>
+        </div>
+      </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servizi" class="services-section">
+        <div class="max-w">
+            <p class="section-label">Cosa faccio per te</p>
+            <h2 class="section-title">I Miei Servizi</h2>
+            <p class="section-sub" style="color:rgba(255,255,255,.7)">Ogni percorso nasce da un colloquio approfondito.
+                Nessuna soluzione preconfezionata.</p>
+            <div class="services-grid">
+                <div class="srv-card">
+                    <div class="srv-card-header">
+                        <div class="srv-icon">⚖️</div>
+                        <div class="srv-title">Dimagrimento</div>
+                    </div>
+                    <div class="srv-desc">Piano ipocalorico personalizzato con obiettivi realistici, monitoraggio
+                        continuo e adattamento progressivo.</div>
+                </div>
+                <div class="srv-card">
+                    <div class="srv-card-header">
+                        <div class="srv-icon">💪</div>
+                        <div class="srv-title">Massa Muscolare</div>
+                    </div>
+                    <div class="srv-desc">Strategia nutrizionale in sinergia con il tuo allenamento per ottimizzare la
+                        composizione corporea.</div>
+                </div>
+                <div class="srv-card">
+                    <div class="srv-card-header">
+                        <div class="srv-icon">🩺</div>
+                        <div class="srv-title">Patologie Metaboliche</div>
+                    </div>
+                    <div class="srv-desc">Protocolli specifici per diabete, dislipidemie, sindrome metabolica e
+                        patologie tiroidee.</div>
+                </div>
+                <div class="srv-card">
+                    <div class="srv-card-header">
+                        <div class="srv-icon">🤰</div>
+                        <div class="srv-title">Gravidanza e Allattamento</div>
+                    </div>
+                    <div class="srv-desc">Supporto nutrizionale nella gestazione e nel post-partum per il benessere di
+                        mamma e bambino.</div>
+                </div>
+                <div class="srv-card">
+                    <div class="srv-card-header">
+                        <div class="srv-icon">🏃</div>
+                        <div class="srv-title">Nutrizione Sportiva</div>
+                    </div>
+                    <div class="srv-desc">Alimentazione periodizzata per atleti, dalla forza
+                        all'endurance.</div>
+                </div>
+                <div class="srv-card">
+                    <div class="srv-card-header">
+                        <div class="srv-icon">🌿</div>
+                        <div class="srv-title">Stile di Vita Sano</div>
+                    </div>
+                    <div class="srv-desc">Educazione alimentare e rieducazione delle abitudini per chi vuole
+                        semplicemente stare meglio.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="prezzi" class="pricing-section">
+        <div class="max-w" style="text-align:center;">
+            <p class="section-label">Trasparenza prima di tutto</p>
+            <h2 class="section-title">I Pacchetti</h2>
+            <p class="section-sub" style="margin:0 auto 48px;">Scegli il percorso più adatto alle tue esigenze.</p>
+        </div>
+        <div class="max-w">
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="price-name">Prima visita nutrizionale</div>
+                    <div class="price-num">€ 70</div>
+                    <div class="price-period">Visita singola</div>
+                    <div class="price-divider"></div>
+                    <div class="price-feat"><span class="check">✓</span> Analisi bioimpedenziometrica</div>
+                    <div class="price-feat"><span class="check">✓</span> Analisi antropometrica</div>
+                    <div class="price-feat"><span class="check">✓</span> Anamnesi alimentare completa</div>
+                    <div class="price-feat"><span class="check">✓</span> Piano alimentare personalizzato</div>
+                    <div class="price-feat"><span class="check">✓</span> Consulenza in studio o online</div>
+                    <a href="#contatti" class="price-cta">Inizia ora</a>
+                </div>
+                <div class="price-card featured">
+                    <!-- <div class="price-badge">Più scelto</div> -->
+                    <div class="price-name price-name-featured">Controlli nutrizionali successivi</div>
+                    <div class="price-num">€ 30</div>
+                    <div class="price-period">Visita singola</div>
+                    <div class="price-divider"></div>
+                    <div class="price-feat"><span class="check">✓</span> Valutazione dell'aderenza al piano alimentare
+                    </div>
+                    <div class="price-feat"><span class="check">✓</span> Eventuali modifiche e aggiornamenti del piano
+                        nutrizionale</div>
+                    <div class="price-feat"><span class="check">✓</span> Misurazione di peso, circonferenze e
+                        composizione corporea</div>
+                    <div class="price-feat"><span class="check">✓</span> Valutazione dei progressi e degli obiettivi
+                        successivi</div>
+                    <a href="#contatti" class="price-cta">Inizia ora</a>
+                </div>
+                <div class="price-card">
+                    <div class="price-name">Percorso Premium</div>
+                    <div class="price-num">
+                        €150
+                        <span class="old-price">€ 160</span>
+                    </div>
+                    <div class="price-period">Prima visita + Tre controlli nutrizionali</div>
+                    <div class="price-divider"></div>
+                    <div class="price-feat"><span class="check">✓</span> Prima visita nutrizionale completa</div>
+                    <div class="price-feat"><span class="check">✓</span> Tre controlli nutrizionali di monitoraggio: il
+                        primo dopo 15 giorni dalla visita iniziale e i successivi due a cadenza mensile</div>
+                    <!-- <div class="price-feat"><span class="check">✓</span> Supporto h24 prioritario</div>
+                    <div class="price-feat"><span class="check">✓</span> Analisi esami del sangue inclusa</div>
+                    <div class="price-feat"><span class="check">✓</span> Consulenze illimitate</div> -->
+                    <a href="#contatti" class="price-cta">Inizia ora</a>
+                </div>
+            </div>
+            <p style="text-align:center;margin-top:28px;font-size:.83rem;color:var(--mid);">Hai esigenze particolari? <a
+                    href="#contatti" style="color:var(--sage-dk);font-weight:500;">Contattami</a> per un preventivo su
+                misura.</p>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <!-- <section class="testi-section">
+  <div class="max-w">
+    <p class="section-label">Cosa dicono di me</p>
+    <h2 class="section-title">Puoi Fidarti</h2>
+    <p class="section-sub">Le parole dei miei pazienti parlano per me.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">Finalmente un nutrizionista che non mi ha fatto sentire in colpa per quello che mangio. Il piano è flessibile e funziona davvero. Ho perso 8 kg in 3 mesi senza rinunciare alla pizza.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MR</div>
+          <div>
+            <div class="testi-name">Maria R.</div>
+            <div class="testi-loc">Napoli</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">Seguo il Dott. Guarino da 6 mesi per la gestione del diabete di tipo 2. I miei valori glicemici sono migliorati notevolmente e mi sento pieno di energia come non mi sentivo da anni.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">GL</div>
+          <div>
+            <div class="testi-name">Giuseppe L.</div>
+            <div class="testi-loc">Giugliano</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">Consulenza online semplicissima, risponde sempre su WhatsApp e il piano si adatta ai miei impegni. Non avrei mai pensato di riuscire a raggiungere i miei obiettivi così serenamente.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SF</div>
+          <div>
+            <div class="testi-name">Sara F.</div>
+            <div class="testi-loc">Milano (online)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+    <!-- BLOG -->
+    <!-- <section id="blog" class="blog-section">
+  <div class="max-w">
+    <p class="section-label">Consigli pratici</p>
+    <h2 class="section-title">News & Articoli</h2>
+    <p class="section-sub">Aggiornamenti sul mondo della nutrizione per aiutarti a fare scelte più consapevoli ogni giorno.</p>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:var(--light);">🥑</div>
+        <div class="blog-body">
+          <div class="blog-tag">Alimentazione</div>
+          <h3 class="blog-title">I grassi buoni: perché i grassi non fanno ingrassare (se scegli quelli giusti)</h3>
+          <p class="blog-excerpt">Omega-3, olio d'oliva, avocado: la scienza chiarisce perché eliminare i grassi non è la strategia vincente.</p>
+        </div>
+        <div class="blog-footer">
+          <span>10 Mar 2025</span>
+          <a href="#" class="read-more">Leggi →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:var(--peach-lt);">😴</div>
+        <div class="blog-body">
+          <div class="blog-tag">Benessere</div>
+          <h3 class="blog-title">Dormire meglio mangiando meglio: il legame tra nutrizione e qualità del sonno</h3>
+          <p class="blog-excerpt">Triptofano, magnesio, ritmo circadiano: come l'alimentazione influenza il riposo notturno.</p>
+        </div>
+        <div class="blog-footer">
+          <span>22 Feb 2025</span>
+          <a href="#" class="read-more">Leggi →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:#EEF6EE;">🧠</div>
+        <div class="blog-body">
+          <div class="blog-tag">Metabolismo</div>
+          <h3 class="blog-title">Metabolismo lento: mito o realtà? Cosa dice davvero la scienza</h3>
+          <p class="blog-excerpt">Sfatiamo i luoghi comuni più diffusi sul metabolismo e vediamo cosa si può fare concretamente.</p>
+        </div>
+        <div class="blog-footer">
+          <span>5 Feb 2025</span>
+          <a href="#" class="read-more">Leggi →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+    <!-- CTA STRIP -->
+    <div id="contatti" class="cta-strip">
+        <h2>Scrivimi per fissare la tua prima consulenza</h2>
+        <p>Incontrami in studio a <a
+                href="https://www.google.com/maps/search/?api=1&query=Via+Galileo+Ferraris+45+Giugliano+in+Campania"
+                target="_blank" rel="noopener noreferrer"
+                style="color:var(--warm) !important;font-weight:700;text-decoration:underline;">
+                via Galileo Ferraris 45, Giugliano in Campania (NA)</a>, o in videochiamata. Parliamo del tuo obiettivo.</p>
+        <div class="cta-btns">
+            <a href="https://wa.me/393349769082" class="btn-white">📲 WhatsApp</a>
+            <a href="mailto:info@francescoguarino.it" class="btn-wh-outline">✉ Scrivi una email</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="max-w">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Dott. Francesco Guarino</h3>
+                    <p>Biologo Nutrizionista. Percorsi personalizzati per il tuo benessere — Giugliano in Campania (NA)
+                        e online.</p>
+                    <div class="footer-contact">
+                        <div>📍 Via Galileo Ferraris 45, Giugliano in Campania (NA)</div>
+                        <div>📞 +39 334 976 9082</div>
+                        <!-- <div>✉ info@francescoguarino.it</div> -->
+                        <div>🕐 Lun–Ven 9:30–20:00</div>
+                        <div>🕐 Sabato su richiesta</div>
+                        <!-- SOCIAL -->
+                        <!-- <div class="footer-social">
+                            <a href="https://instagram.com/TUO_USERNAME" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <circle cx="12" cy="12" r="4" />
+                                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                                </svg>
+                                Instagram
+                            </a>
+                            <a href="https://facebook.com/TUO_USERNAME" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                                Facebook
+                            </a>
+                            <a href="https://tiktok.com/@TUO_USERNAME" target="_blank" aria-label="TikTok" rel="noopener noreferrer">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.79 1.52V6.75a4.85 4.85 0 0 1-1.02-.06z" />
+                                </svg>
+                                TikTok
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigazione</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">Chi sono</a>
+                    <a href="#servizi">Servizi</a>
+                    <a href="#prezzi">Prezzi</a>
+                    <!-- <a href="#blog">Blog</a> -->
+                </div>
+                <!-- <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <a href="#">Dimagrimento</a>
+                    <a href="#">Massa Muscolare</a>
+                    <a href="#">Patologie Metaboliche</a>
+                    <a href="#">Gravidanza</a>
+                    <a href="#">Sport</a>
+                </div> -->
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <!-- <a href="#">FAQ</a> -->
+                    <a href="../DottGuarino/privacy-policy.html">Privacy Policy</a>
+                    <a href="../DottGuarino/cookie-policy.html">Cookie Policy</a>
+                    <a href="../DottGuarino/termini.html">Termini e Condizioni</a>
+                    <!-- <div class="footer-hours" style="margin-top:12px;">
+                        Lun – Ven<br>09:00 – 20:00<br>Sab 09:00 – 13:00
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Dott. Francesco Guarino – Biologo Nutrizionista. P.IVA 11012621212</span>
+                <span>Realizzato col ❤️ a Napoli</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('burger').addEventListener('click', function () {
+            this.classList.toggle('open');
+            document.querySelector('.nav-links').classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>

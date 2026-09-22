@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Cookie Policy – Dott. Francesco Guarino</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sage-dk: #3E6B3C;
+            --sage: #7C9E7A;
+            --sage-lt: #B5CEB3;
+            --light: #D6E4D4;
+            --cream: #F7F3EC;
+            --warm: #FFFDF9;
+            --char: #2C3330;
+            --mid: #5A6B5E;
+            --border: #E2EBE0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--warm);
+            color: var(--char);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 253, 249, .92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--sage-dk);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo span {
+            font-family: 'DM Sans', sans-serif;
+            font-size: .7rem;
+            font-weight: 400;
+            color: var(--mid);
+            display: block;
+            letter-spacing: .04em;
+        }
+
+        .logo-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--sage-dk);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+        }
+
+        .nav-back {
+            font-size: .88rem;
+            color: var(--sage-dk);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--light);
+            border: 1px solid var(--sage-lt);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: all .2s;
+        }
+
+        .nav-back:hover {
+            background: var(--sage-dk);
+            color: white;
+        }
+
+        .hero-legal {
+            background: linear-gradient(160deg, var(--cream) 60%, var(--light) 100%);
+            padding: 120px 64px 60px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-legal .label {
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 12px;
+        }
+
+        .hero-legal h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--char);
+            margin-bottom: 12px;
+        }
+
+        .hero-legal p {
+            font-size: .9rem;
+            color: var(--mid);
+            font-weight: 300;
+        }
+
+        .content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 64px 64px 80px;
+        }
+
+        .content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--char);
+            margin: 40px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content p {
+            font-size: .92rem;
+            color: var(--mid);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 12px;
+        }
+
+        .content ul {
+            margin: 8px 0 16px 20px;
+        }
+
+        .content ul li {
+            font-size: .92rem;
+            color: var(--mid);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 6px;
+        }
+
+        .content strong {
+            color: var(--char);
+            font-weight: 500;
+        }
+
+        .info-box {
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--sage-dk);
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px;
+            font-size: .85rem;
+        }
+
+        .cookie-table th {
+            background: var(--light);
+            color: var(--sage-dk);
+            font-weight: 600;
+            padding: 10px 14px;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        .cookie-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: var(--mid);
+            font-weight: 300;
+            vertical-align: top;
+        }
+
+        .cookie-table tr:nth-child(even) td {
+            background: var(--cream);
+        }
+
+        footer {
+            background: var(--char);
+            color: rgba(255, 255, 255, .4);
+            padding: 32px 64px;
+            text-align: center;
+            font-size: .8rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, .6);
+            transition: color .2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media(max-width:768px) {
+            .hero-legal {
+                padding: 100px 24px 40px;
+            }
+
+            .content {
+                padding: 40px 24px 60px;
+            }
+
+            footer {
+                padding: 32px 24px;
+            }
+
+            .cookie-table {
+                font-size: .78rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="../DottGuarino/homepage.html" class="nav-logo">
+            <div class="logo-mark">G</div>
+            <div>Dott. Francesco Guarino<span>Biologo Nutrizionista</span></div>
+        </a>
+        <a href="../DottGuarino/homepage.html" class="nav-back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 5l-7 7 7 7" />
+            </svg>
+        </a>
+    </nav>
+
+    <div class="hero-legal">
+        <div style="max-width:760px;margin:0 auto;">
+            <p class="label">Informativa legale</p>
+            <h1>Cookie Policy</h1>
+            <p>Ultimo aggiornamento: gennaio 2025 &nbsp;·&nbsp; ai sensi del Provvedimento Garante Privacy n. 229/2014 e
+                GDPR</p>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <h2>1. Cosa sono i cookie</h2>
+        <p>I cookie sono piccoli file di testo che i siti web visitati dall'utente inviano al suo terminale (computer,
+            tablet, smartphone), dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita
+            successiva.</p>
+        <p>Grazie ai cookie, un sito ricorda le azioni e le preferenze dell'utente (come la lingua, le dimensioni dei
+            caratteri e altre impostazioni di visualizzazione) in modo che non debbano essere indicate nuovamente.</p>
+
+        <h2>2. Tipologie di cookie utilizzati</h2>
+        <p>Il sito <strong>francescoguarino.it</strong> utilizza esclusivamente cookie tecnici, necessari al corretto
+            funzionamento delle pagine. Non vengono utilizzati cookie di profilazione, cookie di tracciamento o cookie
+            di terze parti a scopo pubblicitario.</p>
+
+        <table class="cookie-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Finalità</th>
+                    <th>Durata</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Navigazione</td>
+                    <td>Tecnico / Sessione</td>
+                    <td>Garantisce il corretto funzionamento della navigazione tra le pagine del sito</td>
+                    <td>Sessione</td>
+                </tr>
+                <!-- <tr>
+                    <td>Preferenze</td>
+                    <td>Tecnico / Persistente</td>
+                    <td>Memorizza eventuali preferenze dell'utente (es. consenso banner cookie)</td>
+                    <td>12 mesi</td>
+                </tr> -->
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <p>🍪 <strong>Nessun cookie di terze parti.</strong> Questo sito non utilizza Google Analytics, Facebook
+                Pixel, strumenti pubblicitari o altri tracker. I tuoi dati di navigazione rimangono sul tuo dispositivo.
+            </p>
+        </div>
+
+        <h2>3. Cookie di terze parti</h2>
+        <p>Il sito non installa cookie di terze parti. Tuttavia, potrebbe contenere link a siti esterni (es. Google
+            Maps, WhatsApp) che, se visitati, potrebbero installare propri cookie secondo le rispettive policy, su cui
+            questo sito non ha alcun controllo.</p>
+
+        <h2>4. Come gestire i cookie</h2>
+        <p>L'utente può gestire le proprie preferenze sui cookie direttamente dalle impostazioni del browser. Di seguito
+            i link alle guide dei principali browser:</p>
+        <ul>
+            <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer"
+                    style="color:var(--sage-dk);">Google Chrome</a></li>
+            <li><a href="https://support.mozilla.org/it/kb/Attivare%20e%20disattivare%20i%20cookie" target="_blank" rel="noopener noreferrer"
+                    style="color:var(--sage-dk);">Mozilla Firefox</a></li>
+            <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer"
+                    style="color:var(--sage-dk);">Apple Safari</a></li>
+            <li><a href="https://support.microsoft.com/it-it/windows/eliminare-e-gestire-i-cookie-168dab11-0753-043d-7c16-ede5947fc64d"
+                    target="_blank" rel="noopener noreferrer" style="color:var(--sage-dk);">Microsoft Edge</a></li>
+        </ul>
+        <p>La disabilitazione dei cookie tecnici potrebbe compromettere alcune funzionalità del sito.</p>
+
+        <h2>5. Modifiche alla Cookie Policy</h2>
+        <p>Il Titolare si riserva il diritto di modificare la presente Cookie Policy in qualsiasi momento. Le modifiche
+            saranno pubblicate su questa pagina con aggiornamento della data. Per il trattamento dei dati personali
+            raccolti tramite questo sito, si rinvia alla <a href="privacy-policy.html"
+                style="color:var(--sage-dk);font-weight:500;">Privacy Policy</a>.</p>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Dott. Francesco Guarino – Biologo Nutrizionista &nbsp;·&nbsp;
+            <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+            <a href="cookie-policy.html">Cookie Policy</a> &nbsp;·&nbsp;
+            <a href="termini.html">Termini e Condizioni</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
